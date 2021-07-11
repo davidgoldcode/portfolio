@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import styles from './Contact.module.scss'
 import { Heading } from 'components/basic/Heading'
 import { contactData } from 'data'
+import { v4 as uuidv4 } from 'uuid';
 
 
 const { headerText, socialMedia, hello } = contactData
@@ -42,7 +43,7 @@ export const Contact: FC = () => {
                 <h1 onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>Say {helloWord}</h1>
                 <div>
                     {socialMedia.map((website) => (
-                        <a href={website.url}>{website.name}</a>
+                        <a key={uuidv4()} href={website.url}>{website.name}</a>
                     ))}
                 </div>
             </div>

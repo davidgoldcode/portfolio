@@ -3,6 +3,8 @@ import styles from './Projects.module.scss'
 import { Heading } from 'components/basic/Heading'
 import { projectData } from 'data'
 import { Img } from 'components/basic/Img'
+import { v4 as uuidv4 } from 'uuid';
+
 
 const { headerText, images } = projectData
 
@@ -15,7 +17,7 @@ export const Projects: FC = () => {
             />
             <div className={styles.image_wrapper}>
                 {images.map((picture) => (
-                    <Img src={picture.src} alt={picture.alt} className={styles.image} base64={picture.base64} title={picture.title} description={picture.description} link={picture.link} disableScroll={false} />
+                    <Img key={uuidv4()} src={picture.src} alt={picture.alt} className={styles.image} base64={picture.base64} title={picture.title} description={picture.description} link={picture.link} disableScroll={false} />
                 ))}
             </div>
         </section>
