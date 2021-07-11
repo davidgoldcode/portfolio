@@ -15,7 +15,7 @@ export const About: FC = () => {
 				contentText={contentText}
 			/>
 			<div className={styles.image_container} >
-				{images.map((picture) => (<Img src={picture.src} alt={picture.alt} className={styles.images} title={picture.title} description={picture.description} disableScroll={false} />))}
+				{images.map((picture) => (<Img src={picture.src} alt={picture.alt} base64={picture.base64} className={styles.images} title={picture.title} description={picture.description} disableScroll={false} />))}
 			</div>
 		</section>
 	);

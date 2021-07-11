@@ -12,6 +12,7 @@ $mobile-background: gray;
 	right: 0;
 	top: 0;
 	@include xsmall-only {
+		height: 100%;
 		overflow: auto;
 		visibility: visible;
 		left: 0;
@@ -30,12 +31,15 @@ $mobile-background: gray;
 	align-items: flex-end;
 	padding-right: 10px;
 	@include xsmall-only {
-		min-width: unset;
-		min-height: 50%;
+		height: 50%;
 		li {
 			padding-right: 20px;
 		}
 	}
+}
+
+.header_container li {
+	list-style-type: none;
 }
 
 .header_container li a {
@@ -73,7 +77,6 @@ $colors: $yellow, $blue, $purple, $turqouise;
 		transform: translate3d(-110%, 0, 0);
 		overflow: hidden;
 		visibility: hidden;
-		background-color: $tan;
 		ul {
 			justify-content: end;
 			width: 100%;

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, MouseEventHandler } from 'react';
+import { FC, useState, useEffect, MouseEventHandler, useRef } from 'react';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
 import cx from 'classnames';
@@ -7,14 +7,13 @@ import Head from 'next/head';
 import { Hamburger } from './Hamburger'
 import { headerData as tags } from 'data';
 
-
-
-export const Header: FC = (props) => {
+export const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const hamburgerClickHandler: MouseEventHandler = () => {
 		setIsOpen(!isOpen)
 	}
+
 
 	useEffect(() => {
 		const viewportHandler = () => {
@@ -40,7 +39,7 @@ export const Header: FC = (props) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<header className={cx(styles.header_container, { [styles.mobile_open]: isOpen }, { [styles.mobile_closed]: !isOpen })}>
+			<header className={cx(styles.header_container, { [styles.mobile_open]: isOpen }, { [styles.mobile_closed]: !isOpen })} >
 				<ul>
 					{tags.map(({ title, href }) => {
 						return (

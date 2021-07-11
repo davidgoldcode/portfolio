@@ -13,6 +13,7 @@ interface LinkTitleProps {
 export interface ImgProps {
   src: string;
   alt: string;
+  base64: string;
   title?: string;
   description?: string;
   link?: LinkTitleProps;
@@ -20,8 +21,6 @@ export interface ImgProps {
   disableScroll?: boolean;
   className: string;
 }
-
-// const colorClasses = [styles.red, styles.blue, styles.purple, styles.green]
 
 export const Img: FC<ImgProps> = ({
   src,
@@ -31,10 +30,12 @@ export const Img: FC<ImgProps> = ({
   title,
   description,
   link,
+  base64,
   disableScroll = true,
 }) => {
   const [hasBeenSeen, setHasBeenSeen] = useState<boolean>(false)
   const [buttonClicked, setButtonClicked] = useState<boolean>(false)
+  const [isClicked, setIsClicked] = useState<boolean>(false)
   const ref = useRef<HTMLInputElement>(null);
   const onScreen = useOnScreen(ref, "0px");
 
@@ -49,15 +50,16 @@ export const Img: FC<ImgProps> = ({
   return (
     <Draggable
       disabled={disableScroll}
+      bounds={'parent'}
       handle={`.${styles.hover_cursor}`}
       onStart={() => setButtonClicked(true)}
       onStop={() => setButtonClicked(false)}
     >
-      <div className={cx(className, styles.image_container)} ref={ref}>
+      <div className={cx(className, styles.image_container, { [styles.image_overlay_click]: isClicked })} ref={ref}>
         {/* TODO: Add in blue & blurDataURL */}
         {!disableScroll && <button onClick={() => { }} className={styles.hover_cursor}>{buttonClicked ? <span className={styles.clicked}>🤏</span> : <span>🤚</span>}</button>}
-        <Image src={src} alt={alt} layout={'fill'} className={styles.image} />
-        {hasOverlay && <div className={cx({ [styles.image_overlay]: hasBeenSeen }, 'img-animation')}>
+        <Image src={src} alt={alt} layout={'fill'} placeholder={'blur'} blurDataURL={base64} className={styles.image} />
+        {hasOverlay && <div className={cx({ [styles.image_overlay]: hasBeenSeen }, 'img-animation')} onClick={() => setIsClicked(!isClicked)}>
           {(title || description) && (
             <>
               {title && <h2>{title}</h2>}

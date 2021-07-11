@@ -1,14 +1,11 @@
-@import 'styles/constants.scss';
+@import "styles/constants.scss";
 
 .website_wrapper {
-	background-image: #faff99;
-	background-image: radial-gradient(
-			at 9% 32%,
-			hsla(252, 71%, 78%, 1) 0,
-			transparent 44%
-		),
-		radial-gradient(at 94% 44%, hsla(88, 88%, 78%, 0.5) 0, transparent 40%),
-		radial-gradient(at 64% 50%, hsla(81, 69%, 64%, 0.5) 0, transparent 53%),
-		radial-gradient(at 31% 52%, hsla(38, 65%, 74%, 0.5) 0, transparent 55%),
-		radial-gradient(at 93% 62%, hsla(100, 95%, 68%, 0.5) 0, transparent 59%);
+	background-image: #99e6ff;
+	background-image: radial-gradient(at 28% 69%, hsla(166, 89%, 79%, 0.8) 0, transparent 50%),
+		radial-gradient(at 25% 50%, hsla(25, 82%, 68%, 0.8) 0, transparent 49%),
+		radial-gradient(at 57% 93%, hsla(265, 76%, 64%, 0.8) 0, transparent 56%),
+		radial-gradient(at 1% 49%, hsla(231, 90%, 79%, 0.8) 0, transparent 44%),
+		radial-gradient(at 32% 17%, hsla(36, 80%, 60%, 0.8) 0, transparent 41%),
+		radial-gradient(at 47% 85%, hsla(79, 90%, 72%, 0.8) 0, transparent 50%);
 }

@@ -6,14 +6,13 @@ $colors: $yellow, $red, $blue, $pink, $purple, $turqouise, $green, $tan;
 
 .image_container {
     position: relative;
-
-    @include small-down {
-        // display: none;
-    }
 }
 
 // Hover Cursor
 .hover_cursor {
+    @include xsmall-only {
+        display: none;
+    }
     z-index: 2;
     position: absolute;
     left: -20px;
@@ -97,6 +96,15 @@ $colors: $yellow, $red, $blue, $pink, $purple, $turqouise, $green, $tan;
 
 .image_overlay:hover {
     @include small-up {
+        @include imageOverlayText;
+    }
+}
+
+.image_container.image_overlay_click {
+    .hover_cursor {
+        display: inline-block;
+    }
+    .image_overlay {
         @include imageOverlayText;
     }
 }

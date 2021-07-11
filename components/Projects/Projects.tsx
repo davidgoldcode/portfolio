@@ -15,7 +15,7 @@ export const Projects: FC = () => {
             />
             <div className={styles.image_wrapper}>
                 {images.map((picture) => (
-                    <Img src={picture.src} alt={picture.alt} className={styles.image} title={picture.title} description={picture.description} link={picture.link} disableScroll={false} />
+                    <Img src={picture.src} alt={picture.alt} className={styles.image} base64={picture.base64} title={picture.title} description={picture.description} link={picture.link} disableScroll={false} />
                 ))}
             </div>
         </section>

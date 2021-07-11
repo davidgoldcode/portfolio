@@ -24,7 +24,7 @@ export const headerData = [
 
 // HOMEPAGE
 export const homeData = {
-    headerText: 'About me',
+    headerText: 'David Gold',
     images: [{
         src: '/assets/homepage/me_nyc_homepage.jpg',
         alt: 'Me in NYC',
