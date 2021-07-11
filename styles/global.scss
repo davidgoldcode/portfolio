@@ -2,6 +2,9 @@
 @import "media-queries";
 @import "./typography/fonts.scss";
 
+@include font("Bimbo-Jumbo", "./bimboJumbo/Bimbo_Jumbo");
+@include font("Neutral-Face", "./neutralFaceBold/NeutralFaceBold");
+
 html,
 body,
 div,
