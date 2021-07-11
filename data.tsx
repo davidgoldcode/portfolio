@@ -35,7 +35,7 @@ export const homeData = {
 // ABOUT ME
 export const aboutData = {
     headerText: 'About me',
-    contentText: `Software engineer based out of NYC. When I'm not programming, I enjoy cooking, traveling, chess, skiing, basketball and exploring the big apple 🍎`,
+    contentText: `Software engineer based out of NYC. When I'm not programming, I enjoy cooking, traveling, chess, skiing, basketball and exploring the NYC`,
     images: [
         {
             src: '/assets/about/chess_aboutme_desktop.jpg',
