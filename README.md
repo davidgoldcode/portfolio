@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# davidgold.io
 
-## Getting Started
+[![Twitter: davidigold](https://img.shields.io/twitter/follow/davidigold)](https://twitter.com/davidigold)
+[![Linkedin: davidigold](https://img.shields.io/badge/-davidigold-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/davidigold/)](https://www.linkedin.com/in/davidigold/)
+[![GitHub davidgoldcode](https://img.shields.io/github/followers/davidgoldcode?label=follow&style=social)](https://github.com/davidgoldcode)
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
+```javascript
+const David = {
+  pronouns: "he" | "him",
+  code: [Typescript, Javascript, HTML, CSS, Python, NodeJS, React, Knex],
+  tools: [Redux, Cypress, Knex, TailwindCSS, Storybook, Styled-Components],
+  about: {
+    interests: ["skiing", "running", "basketball", "reading", "cooking"],
+    pastCompanies: ["Citigroup", "Dropbox", "Eightsleep"]
+    college: "University of Florida"
+    },
+ recent: "I recently finished a 6-month coding bootcamp"
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Want to contribute? Great!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+To fix a bug or enhance an existing module, follow these steps:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Fork the repo
+- Create a new branch (`git checkout -b improve-feature`)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (`git commit -am 'Improve feature'`)
+- Push to the branch (`git push origin improve-feature`)
+- Create a Pull Request
 
-## Learn More
+## Bug / Feature Request
 
-To learn more about Next.js, take a look at the following resources:
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you'd like to request a new function, feel free to do so by opening an issue. Please include screenshots / results / details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br/>
 
-## Deploy on Vercel
+## Built with
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [SASS](https://sass-lang.com/) - Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.
+- [NextJS](https://nextjs.org/) - Next.js is an open-source development framework build on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites
