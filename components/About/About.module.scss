@@ -35,8 +35,8 @@ $page-color: $green;
 	width: 350px;
 
 	@include small-down {
-		height: 400px;
-		width: 280px;
+		height: 350px;
+		width: 240px;
 	}
 
 	@include xsmall-only {
