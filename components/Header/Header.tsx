@@ -43,8 +43,8 @@ export const Header: FC = () => {
 				<ul>
 					{tags.map(({ title, href }) => {
 						return (
-							<li>
-								<Link href={href} key={uuidv4()}>
+							<li key={uuidv4()}>
+								<Link href={href} >
 									<a>{title}</a>
 								</Link>
 							</li>
