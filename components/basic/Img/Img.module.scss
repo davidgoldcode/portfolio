@@ -101,10 +101,12 @@ $colors: $yellow, $red, $blue, $pink, $purple, $turqouise, $green, $tan;
 }
 
 .image_container.image_overlay_click {
-    .hover_cursor {
-        display: inline-block;
-    }
-    .image_overlay {
-        @include imageOverlayText;
+    @include small-down {
+        .hover_cursor {
+            display: inline-block;
+        }
+        .image_overlay {
+            @include imageOverlayText;
+        }
     }
 }
