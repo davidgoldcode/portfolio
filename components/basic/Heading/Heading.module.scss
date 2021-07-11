@@ -1,0 +1,7 @@
+@import 'styles/constants.scss';
+@import 'styles/mixins';
+
+.heading_container {
+	@include headerGrid;
+	@include headerText;
+}

@@ -1,0 +1,62 @@
+@import "styles/constants.scss";
+@import "styles/mixins";
+
+$page-color: $green;
+
+.about_wrapper {
+	@include minHeight;
+	@include pagePadding;
+	position: relative;
+}
+
+.about_header {
+	h1 {
+		color: $page-color;
+	}
+}
+
+.image_container {
+	width: 100%;
+	height: 800px;
+	position: relative;
+	@include xsmall-only {
+		display: grid;
+		height: auto;
+		justify-items: center;
+		gap: 40px 0;
+		margin: 20px 0;
+	}
+}
+
+.about_wrapper .images {
+	display: inline-block;
+	position: absolute;
+	height: 500px;
+	width: 350px;
+
+	@include small-down {
+		height: 400px;
+		width: 280px;
+	}
+
+	@include xsmall-only {
+		position: static;
+	}
+
+	@for $i from 1 through 3 {
+		&:nth-of-type(#{$i}) {
+			top: 5vmin * $i;
+			left: 200px * $i;
+			&:hover {
+				z-index: $z_index_img_hover;
+			}
+			@include small-down {
+				left: 100px * $i;
+			}
+			h2 {
+				position: unset;
+				color: $page-color;
+			}
+		}
+	}
+}

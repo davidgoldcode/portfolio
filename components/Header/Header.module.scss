@@ -1,0 +1,86 @@
+@import "styles/constants";
+@import "styles/media-queries";
+@import "styles/mixins";
+
+$mobile-width: 70%;
+$mobile-background: gray;
+
+.header_container {
+	height: 300px;
+	z-index: $z_index_header;
+	position: fixed;
+	right: 0;
+	top: 0;
+	@include xsmall-only {
+		overflow: auto;
+		visibility: visible;
+		left: 0;
+		top: 0;
+		width: 70%;
+		text-align: end;
+	}
+}
+
+.header_container ul {
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	height: 100%;
+	z-index: $z_index_header;
+	text-align: right;
+	align-items: flex-end;
+	padding-right: 10px;
+	@include xsmall-only {
+		min-width: unset;
+		min-height: 50%;
+		li {
+			padding-right: 20px;
+		}
+	}
+}
+
+.header_container li a {
+	@include neutralFace;
+	text-decoration: none;
+	font-size: 38px;
+	transition: font-size 200ms ease-in-out;
+	@include xsmall-only {
+		font-size: 30px;
+	}
+	&:hover {
+		font-size: 44px;
+		@include xsmall-only {
+			font-size: 30px;
+		}
+	}
+}
+
+$colors: $yellow, $blue, $purple, $turqouise;
+
+@for $i from 1 through length($colors) {
+	.header_container li:nth-of-type(#{$i}) a {
+		color: nth($colors, $i);
+	}
+}
+
+.header_container.mobile_open {
+	transform: translate3d(0, 0, 0);
+	transition: transform 1s ease-in-out;
+	background-color: $tan;
+}
+
+.header_container.mobile_closed {
+	@include xsmall-only {
+		transform: translate3d(-110%, 0, 0);
+		overflow: hidden;
+		visibility: hidden;
+		background-color: $tan;
+		ul {
+			justify-content: end;
+			width: 100%;
+			text-align: end;
+		}
+		li {
+			padding-right: 20px;
+		}
+	}
+}

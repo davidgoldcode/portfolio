@@ -1,0 +1,54 @@
+@import "styles/constants.scss";
+@import "styles/media-queries";
+@import "styles/mixins";
+
+$page-color: $turqouise;
+
+.contact_wrapper {
+	@include small-up {
+		@include minHeight;
+	}
+	@include pagePadding;
+	min-height: 600px;
+	position: relative;
+}
+
+.contact_header {
+	h1 {
+		color: $page-color;
+	}
+}
+
+.social_container {
+	@include absoluteCenter;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1,
+	a {
+		padding: 20px;
+	}
+}
+
+.social_container > div {
+	display: grid;
+}
+
+.social_container {
+	@include h1Styling;
+	h1 {
+		@include neutralFace;
+		white-space: nowrap;
+	}
+}
+
+.social_container a {
+	@include neutralFace;
+	font-size: 34px;
+	@include small-down {
+		font-size: 30px;
+	}
+	text-decoration: none;
+	text-align: right;
+	color: $blue;
+}

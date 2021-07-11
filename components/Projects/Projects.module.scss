@@ -1,0 +1,103 @@
+@import "styles/constants.scss";
+@import "styles/media-queries";
+@import "styles/mixins";
+
+$page-color: $blue;
+
+.projects_wrapper {
+	@include pagePadding;
+	position: relative;
+}
+
+.projects_header {
+	h1 {
+		color: $page-color;
+	}
+}
+
+.image_wrapper {
+	height: 1000px;
+
+	@include small-down {
+		height: 1250px;
+	}
+	@include xsmall-only {
+		height: 1500px;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+	}
+}
+
+.image {
+	position: absolute;
+	@include xsmall-only {
+		position: static;
+	}
+}
+
+.image:nth-of-type(1) {
+	height: 300px;
+	width: 300px;
+	bottom: 10%;
+	left: 8%;
+
+	@include small-down {
+		bottom: 30%;
+		left: 5%;
+	}
+
+	@include large-up {
+		height: 350px;
+		width: 350px;
+		bottom: 10%;
+		left: 5%;
+	}
+}
+.image:nth-of-type(2) {
+	height: 250px;
+	width: 450px;
+	top: 15%;
+	left: 20%;
+	@include small-down {
+		left: 10%;
+		top: 10%;
+	}
+
+	@include large-up {
+		height: 300px;
+		width: 500px;
+	}
+}
+.image:nth-of-type(3) {
+	height: 300px;
+	width: 250px;
+	top: 20%;
+	left: 70%;
+
+	@include small-down {
+		top: 30%;
+		left: 50%;
+	}
+
+	@include large-up {
+		height: 400px;
+		width: 350px;
+		top: 25%;
+		left: 70%;
+	}
+}
+
+.image:nth-of-type(4) {
+	height: 320px;
+	width: 300px;
+	bottom: 20%;
+	left: 50%;
+	@include small-down {
+		bottom: 5%;
+	}
+	@include large-up {
+		bottom: 10%;
+		left: 45%;
+	}
+}
