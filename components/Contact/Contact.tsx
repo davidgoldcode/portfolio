@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import styles from './Contact.module.scss'
-import { Heading } from 'components/basic/Heading'
+import { Heading } from 'components/basic/Heading/Heading'
 import { contactData } from 'data'
 import { v4 as uuidv4 } from 'uuid';
 

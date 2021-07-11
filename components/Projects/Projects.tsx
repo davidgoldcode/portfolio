@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styles from './Projects.module.scss'
-import { Heading } from 'components/basic/Heading'
+import { Heading } from 'components/basic/Heading/Heading'
 import { projectData } from 'data'
 import { Img } from 'components/basic/Img'
 import { v4 as uuidv4 } from 'uuid';
