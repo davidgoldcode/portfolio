@@ -10,7 +10,7 @@
 const David = {
   pronouns: "he" | "him",
   code: [Typescript, Javascript, HTML, CSS, Python, NodeJS, React, Knex],
-  tools: [Redux, Cypress, Knex, TailwindCSS, Storybook, Styled-Components],
+  tools: [Redux, MobX, Cypress, Knex, TailwindCSS, SASS, Storybook, Styled-Components],
   about: {
     interests: ["skiing", "running", "basketball", "reading", "cooking"],
     pastCompanies: ["Citigroup", "Dropbox", "Eightsleep"]
