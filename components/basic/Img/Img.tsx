@@ -56,10 +56,9 @@ export const Img: FC<ImgProps> = ({
       onStop={() => setButtonClicked(false)}
     >
       <div className={cx(className, styles.image_container, { [styles.image_overlay_click]: isClicked })} ref={ref}>
-        {/* TODO: Add in blue & blurDataURL */}
         {!disableScroll && <button onClick={() => { }} className={styles.hover_cursor}>{buttonClicked ? <span className={styles.clicked}>🤏</span> : <span>🤚</span>}</button>}
         <Image src={src} alt={alt} layout={'fill'} placeholder={'blur'} blurDataURL={base64} className={styles.image} />
-        {hasOverlay && <div className={cx({ [styles.image_overlay]: hasBeenSeen }, 'img-animation')} onClick={() => setIsClicked(!isClicked)}>
+        {hasOverlay && <div className={cx({ [styles.image_overlay]: hasBeenSeen }, { [styles.onscreen]: onScreen }, 'img-animation')} onClick={() => setIsClicked(!isClicked)}>
           {(title || description) && (
             <>
               {title && <h2>{title}</h2>}

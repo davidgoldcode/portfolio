@@ -74,23 +74,3 @@
 @mixin neutralFace {
 	font-family: "Neutral-Face";
 }
-
-$colors: $yellow, $red, $blue, $pink, $purple, $turqouise, $green, $tan;
-
-@mixin imageAnimation($key: 1) {
-	animation: backgroundChange 1.5s;
-	$nth: nth($colors, $key);
-	$random: $nth !default;
-
-	@keyframes backgroundChange {
-		from {
-			background-color: $random;
-		}
-		80% {
-			background-color: $random;
-		}
-		to {
-			background-color: transparent;
-		}
-	}
-}

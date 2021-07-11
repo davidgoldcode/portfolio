@@ -12,7 +12,7 @@ export const HomePage: FC = () => {
 	return (
 		<section id={'home'} className={styles.homepage_container}>
 			<h1>{headerText}</h1>
-			{images.map((picture) => <Img key={uuidv4()} src={picture.src} alt={picture.alt} className={styles.image} base64={picture.base64} disableScroll={true} hasOverlay={false} />)}
+			{images.map((picture) => <Img key={uuidv4()} src={picture.src} alt={picture.alt} className={styles.image} base64={picture.base64} disableScroll={true} />)}
 		</section>
 	)
 };

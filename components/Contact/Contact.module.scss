@@ -36,8 +36,10 @@ $page-color: $turqouise;
 
 .social_container {
 	@include h1Styling;
-	h1 {
+	h1,
+	:global(.hello-word) {
 		@include neutralFace;
+		text-transform: uppercase;
 		white-space: nowrap;
 	}
 }
